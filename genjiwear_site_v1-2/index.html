@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Genjiwear • Landing Page</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1 class="brand-name">Genjiwear</h1>
+        <p class="tagline">Styles that reflect your identity</p>
+        <a href="#about" class="cta-btn">Explore Products</a>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>About Genjiwear</h2>
+        <p>
+          Genjiwear focuses on creating apparel and accessories that embody confidence and individuality. 
+          With modern designs and premium materials, we want everyone to experience a unique style that resonates with who they are.
+        </p>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="section categories">
+      <div class="container">
+        <h2>Our Collection</h2>
+        <div class="category-grid">
+          <div class="category-item">
+            <h3>Streetwear Apparel</h3>
+            <p>
+              A collection that fuses comfort with style, helping you stand out in every situation.
+            </p>
+          </div>
+          <div class="category-item">
+            <h3>Accessories</h3>
+            <p>
+              Complete your look with stylish hats, bags, and other accessories.
+            </p>
+          </div>
+          <div class="category-item">
+            <h3>Exclusive Releases</h3>
+            <p>
+              New launches and limited edition collections for true Genjiwear fans.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Newsletter Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to stay updated?</p>
+        <form class="newsletter-form" onsubmit="return false">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            aria-label="Email"
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Genjiwear. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
