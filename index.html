@@ -1,94 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Genjiwear • Landing Page</title>
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Hero Section -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENJIWEAR — Modern Minimalist Streetwear & Art</title>
+    <meta name="description" content="GENJIWEAR: Modern minimalist streetwear, hoodies, tees, and accessories. Express your identity. Shop the latest drops.">
+    <meta property="og:title" content="GENJIWEAR — Modern Minimalist Streetwear & Art">
+    <meta property="og:description" content="Modern minimalist streetwear & accessories">
+    <meta property="og:image" content="assets/og-cover.jpg">
+    <!-- Use the GitHub Pages URL for open graph and canonical references -->
+    <meta property="og:url" content="https://genjizaa01.github.io/Genjiwear-site/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="canonical" href="https://genjizaa01.github.io/Genjiwear-site/">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <header class="hero">
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h1 class="brand-name">Genjiwear</h1>
-        <p class="tagline">Styles that reflect your identity</p>
-        <a href="#about" class="cta-btn">Explore Products</a>
-      </div>
+        <nav class="navbar">
+            <div class="logo">GENJIWEAR</div>
+            <ul class="nav-links">
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Minimalist Streetwear for Every Day</h1>
+            <p>Discover modern apparel inspired by urban art and clean aesthetics. Limited drops, premium quality.</p>
+            <a href="#collection" class="cta-button">Explore Collection</a>
+        </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-      <div class="container">
-        <h2>About Genjiwear</h2>
-        <p>
-          Genjiwear focuses on creating apparel and accessories that embody confidence and individuality. 
-          With modern designs and premium materials, we want everyone to experience a unique style that resonates with who they are.
-        </p>
-      </div>
-    </section>
-
-    <!-- Categories Section -->
-    <section id="categories" class="section categories">
-      <div class="container">
+    <section id="collection" class="section collection">
         <h2>Our Collection</h2>
-        <div class="category-grid">
-          <div class="category-item">
-            <h3>Streetwear Apparel</h3>
-            <p>
-              A collection that fuses comfort with style, helping you stand out in every situation.
-            </p>
-          </div>
-          <div class="category-item">
-            <h3>Accessories</h3>
-            <p>
-              Complete your look with stylish hats, bags, and other accessories.
-            </p>
-          </div>
-          <div class="category-item">
-            <h3>Exclusive Releases</h3>
-            <p>
-              New launches and limited edition collections for true Genjiwear fans.
-            </p>
-          </div>
+        <p>Premium tees, hoodies, and accessories designed for self-expression. Each piece is created with original artwork and sustainably printed on demand.</p>
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="assets/product-tee.jpg" alt="Genji Tee">
+                <h3>Minimalist Genji Tee</h3>
+                <p>Soft cotton tee featuring subtle Genji line art.</p>
+                <a href="https://www.etsy.com/shop/genjiwear" target="_blank" rel="noopener" class="shop-button">Shop Now</a>
+            </div>
+            <div class="product-item">
+                <img src="assets/product-hoodie.jpg" alt="Genji Hoodie">
+                <h3>Abstract Hoodie</h3>
+                <p>Cozy hoodie with bold abstract Genji graphics.</p>
+                <!-- All products currently link to the official Etsy store; update this URL if you add more marketplaces later -->
+                <a href="https://www.etsy.com/shop/genjiwear" target="_blank" rel="noopener" class="shop-button">Shop Now</a>
+            </div>
+            <div class="product-item">
+                <img src="assets/product-poster.jpg" alt="Genji Poster">
+                <h3>Art Print Poster</h3>
+                <p>High-quality print featuring original Genji artwork.</p>
+                <a href="https://www.etsy.com/shop/genjiwear" target="_blank" rel="noopener" class="shop-button">Shop Now</a>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Contact / Newsletter Section -->
+    <section id="about" class="section about">
+        <h2>About GENJIWEAR</h2>
+        <p>GENJIWEAR is a lifestyle brand born from the intersection of art and minimalism. Our mission is to empower individuals to express their identity through thoughtfully designed apparel. We believe in quality craftsmanship, sustainable production, and original art that resonates.</p>
+        <p>All our products are printed on demand to reduce waste and environmental impact. We collaborate with artists worldwide to bring fresh perspectives and unique designs to our collections.</p>
+    </section>
+
     <section id="contact" class="section contact">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to stay updated?</p>
-        <form class="newsletter-form" onsubmit="return false">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            required
-            aria-label="Email"
-          />
-          <button type="submit">Subscribe</button>
+        <h2>Stay Connected</h2>
+        <p>Join our community for exclusive drops, promotions, and stories behind the art. Get updates straight to your inbox.</p>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="subscribe-form">
+            <input type="email" name="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
         </form>
-      </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/yourgenjiwear" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@yourgenjiwear" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://x.com/yourgenjiwear" target="_blank" rel="noopener">X (Twitter)</a>
+        </div>
     </section>
 
     <footer class="footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> Genjiwear. All rights reserved.</p>
-      </div>
+        <p>&copy; 2025 GENJIWEAR. All rights reserved.</p>
+        <p><a href="mailto:genjiwear.store@gmail.com">genjiwear.store@gmail.com</a></p>
     </footer>
-
-    <script>
-      // Set current year in footer
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+</body>
 </html>
