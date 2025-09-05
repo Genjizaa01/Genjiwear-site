@@ -1,0 +1,31 @@
+{
+  "brand_name": "GENJIWEAR",
+  "business_entity_type": "sole proprietorship",
+  "jurisdiction": "Texas, USA",
+  "contact_email": "Genjiwear.store@gmail.com",
+  "store_url": "https://genjizaa01.github.io/Genjiwear-site/",
+  "returns": {
+    "window_days": 14,
+    "pod_made_to_order": true,
+    "allow_size_exchange": true,
+    "buyer_pays_return_shipping_if_not_defective": true
+  },
+  "digital_goods": {
+    "refundable": false,
+    "exceptions": "Defective or corrupted file; we will re-issue or refund upon verification."
+  },
+  "shipping": {
+    "production_days_min": 2,
+    "production_days_max": 7,
+    "carrier_note": "Transit times vary by carrier and destination."
+  },
+  "legal": {
+    "governing_law": "Texas, USA",
+    "arbitration": true
+  },
+  "ui": {
+    "base_path": "/Genjiwear-site",
+    "theme_bg": "#f7f2e8",
+    "theme_fg": "#111111"
+  }
+}
