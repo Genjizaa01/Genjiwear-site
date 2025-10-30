@@ -61,49 +61,38 @@
             width: 100%;
             height: 250px;
             object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-        .product-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
-        .price {
-            font-size: 1.8rem;
-            color: #2ecc71;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .description {
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-        .specs {
-            margin-bottom: 20px;
-        }
-        .specs ul {
-            list-style: none;
-            padding: 0;
-        }
-        .specs li {
-            padding: 5px 0;
-            color: #666;
-        }
-        .btn-order {
-            width: 100%;
-            padding: 12px;
-            background: #3498db;
-            color: #fff;
-            border: none;
             border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease;
+            margin-bottom: 15px;
         }
-        .btn-order:hover {
-            background: #2980b9;
+        .product-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .product-info .price {
+            font-size: 1.8rem;
+            color: #e63946;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .product-info p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .buy-button {
+            display: inline-block;
+            background: #e63946;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .buy-button:hover {
+            background: #d62828;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -114,115 +103,69 @@
         <div class="page-header">
             <h1>Our Products</h1>
             <p>Browse our selection of premium tech products</p>
-            <p style="font-size:small; color:gray;">Expected delivery 7-14 days. All products are secondhand with all accessories, 97%-99% condition. Starting price from $399-$999.</p>
+            <p style="font-size: 1rem; color: #999; margin-top: 10px;">Expected delivery 7-14 days after payment</p>
+            <img src="https://via.placeholder.com/400x130?text=Apple+Devices" alt="Apple Devices" style="width:400px;display:block;margin:10px auto;">
         </div>
+
         <div class="product-grid">
-            <!-- Product 1: iPhone 14 Pro Max -->
             <div class="product-card">
-                <img src="iphone14promax.png" alt="iPhone 14 Pro Max" class="product-image">
-                <h3>iPhone 14 Pro Max</h3>
-                <div class="price">$899</div>
-                <p class="description">Pre-owned device, complete accessories, 97%-99% condition</p>
-                <div class="specs">
-                    <ul>
-                        <li>• 128GB / 256GB / 512GB</li>
-                        <li>• All colors available</li>
-                        <li>• Factory unlocked</li>
-                    </ul>
+                <img src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500" alt="iPhone 15 Pro" class="product-image">
+                <div class="product-info">
+                    <h3>iPhone 15 Pro</h3>
+                    <p class="price">$999</p>
+                    <p>The latest flagship iPhone with A17 Pro chip, titanium design, and advanced camera system.</p>
+                    <a href="https://www.lazada.co.th/products/apple-iphone-15-pro-i4382853773.html" class="buy-button" target="_blank">View on Lazada</a>
                 </div>
-                <button class="btn-order">Order Now</button>
             </div>
-            <!-- Product 2: AirPods Pro -->
+
             <div class="product-card">
-                <img src="airpodspro.png" alt="AirPods Pro (2nd Gen)" class="product-image">
-                <h3>AirPods Pro (2nd Gen)</h3>
-                <div class="price">$199</div>
-                <p class="description">Like new condition, complete accessories</p>
-                <div class="specs">
-                    <ul>
-                        <li>• Active Noise Cancellation</li>
-                        <li>• MagSafe Charging Case</li>
-                        <li>• Full warranty</li>
-                    </ul>
+                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500" alt="AirPods Pro" class="product-image">
+                <div class="product-info">
+                    <h3>AirPods Pro (2nd Gen)</h3>
+                    <p class="price">$249</p>
+                    <p>Premium wireless earbuds with active noise cancellation and spatial audio.</p>
+                    <a href="https://www.lazada.co.th/products/apple-airpods-pro-2nd-generation-i3038643860.html" class="buy-button" target="_blank">View on Lazada</a>
                 </div>
-                <button class="btn-order">Order Now</button>
             </div>
-            <!-- Product 3: iPad Pro -->
+
             <div class="product-card">
-                <img src="ipadpro11.png" alt="iPad Pro 11 inch" class="product-image">
-                <h3>iPad Pro 11"</h3>
-                <div class="price">$749</div>
-                <p class="description">99% condition, Magic Keyboard included</p>
-                <div class="specs">
-                    <ul>
-                        <li>• M2 Chip</li>
-                        <li>• 128GB / 256GB</li>
-                        <li>• Wi-Fi + Cellular</li>
-                        <li>• Magic Keyboard Bundle</li>
-                    </ul>
+                <img src="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=500" alt="MacBook Pro" class="product-image">
+                <div class="product-info">
+                    <h3>MacBook Pro 14"</h3>
+                    <p class="price">$1,999</p>
+                    <p>Powerful laptop with M3 chip, stunning Liquid Retina XDR display, and all-day battery life.</p>
+                    <a href="https://www.lazada.co.th/products/apple-macbook-pro-14-inch-m3-chip-i4319528743.html" class="buy-button" target="_blank">View on Lazada</a>
                 </div>
-                <button class="btn-order">Order Now</button>
             </div>
-            <!-- Product 4: AirPods Max -->
+
             <div class="product-card">
-                <img src="airpodsmax.png" alt="AirPods Max" class="product-image">
-                <h3>AirPods Max</h3>
-                <div class="price">$449</div>
-                <p class="description">Brand new, sealed</p>
-                <div class="specs">
-                    <ul>
-                        <li>• Active Noise Cancellation</li>
-                        <li>• Adaptive Audio</li>
-                        <li>• MagSafe Charging Case</li>
-                    </ul>
+                <img src="https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=500" alt="Apple Watch" class="product-image">
+                <div class="product-info">
+                    <h3>Apple Watch Series 9</h3>
+                    <p class="price">$399</p>
+                    <p>Advanced health monitoring, fitness tracking, and seamless iPhone integration.</p>
+                    <a href="https://www.lazada.co.th/products/apple-watch-series-9-gps-i4272850366.html" class="buy-button" target="_blank">View on Lazada</a>
                 </div>
-                <button class="btn-order">Order Now</button>
             </div>
-            <!-- Product 5: Apple Watch Ultra -->
+
             <div class="product-card">
-                <img src="applewatchultra.png" alt="Apple Watch Ultra" class="product-image">
-                <h3>Apple Watch Ultra</h3>
-                <div class="price">$699</div>
-                <p class="description">Excellent condition, Alpine Loop included</p>
-                <div class="specs">
-                    <ul>
-                        <li>• 49mm Titanium Case</li>
-                        <li>• GPS + Cellular</li>
-                        <li>• Orange Alpine Loop</li>
-                    </ul>
+                <img src="https://images.unsplash.com/photo-1544244015-9c72fd9c866d?w=500" alt="iPad Air" class="product-image">
+                <div class="product-info">
+                    <h3>iPad Air</h3>
+                    <p class="price">$599</p>
+                    <p>Versatile tablet with M1 chip, perfect for work and entertainment on the go.</p>
+                    <a href="https://www.lazada.co.th/products/apple-ipad-air-m1-chip-i2748952468.html" class="buy-button" target="_blank">View on Lazada</a>
                 </div>
-                <button class="btn-order">Order Now</button>
             </div>
-            <!-- Product 6: Mac Studio -->
+
             <div class="product-card">
-                <img src="macstudio.png" alt="Mac Studio M1 Max" class="product-image">
-                <h3>Mac Studio M1 Max</h3>
-                <div class="price">$1,699</div>
-                <p class="description">Like new, perfect for creators</p>
-                <div class="specs">
-                    <ul>
-                        <li>• M1 Max Chip</li>
-                        <li>• 32GB RAM</li>
-                        <li>• 1TB SSD</li>
-                    </ul>
+                <img src="https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=500" alt="Magic Keyboard" class="product-image">
+                <div class="product-info">
+                    <h3>Magic Keyboard</h3>
+                    <p class="price">$99</p>
+                    <p>Wireless keyboard with rechargeable battery and seamless Mac connectivity.</p>
+                    <a href="https://www.lazada.co.th/products/apple-magic-keyboard-i1964527548.html" class="buy-button" target="_blank">View on Lazada</a>
                 </div>
-                <button class="btn-order">Order Now</button>
-            </div>
-            <!-- Product 7: MacBook Pro -->
-            <div class="product-card">
-                <img src="macbookpro13.png" alt="99% Macbook Pro 13.7 Touch Bar" class="product-image">
-                <h3>MacBook Pro 13" Touch Bar</h3>
-                <div class="price">$529</div>
-                <p class="description">99% condition, Touch Bar model</p>
-                <div class="specs">
-                    <ul>
-                        <li>• Intel Core i5</li>
-                        <li>• 8GB RAM</li>
-                        <li>• 256GB SSD</li>
-                        <li>• Space Gray</li>
-                    </ul>
-                </div>
-                <button class="btn-order">Order Now</button>
             </div>
         </div>
     </div>
