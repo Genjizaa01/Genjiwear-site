@@ -59,175 +59,157 @@
             line-height: 1.6;
             margin-bottom: 15px;
         }
-        .order-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
+        .product-card .specs {
+            background: #f9f9f9;
+            padding: 10px;
             border-radius: 5px;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+        .product-card .specs ul {
+            list-style: none;
+            padding: 0;
+        }
+        .product-card .specs li {
+            padding: 5px 0;
+        }
+        .btn-order {
+            background: #333;
+            color: #fff;
             border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
-            transition: background 0.3s ease;
             width: 100%;
-            text-align: center;
+            transition: background 0.3s ease;
         }
-        .order-button:hover {
-            background: #333;
-        }
-        .payment-section {
-            background: #f9f9f9;
-            padding: 40px;
-            border-radius: 8px;
-            margin-top: 50px;
-        }
-        .payment-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .payment-info {
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-        .payment-info ol {
-            margin-left: 20px;
-        }
-        .payment-info li {
-            margin-bottom: 10px;
-        }
-        .paypal-email {
-            background: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 20px 0;
-            border: 2px solid #0070ba;
-        }
-        .back-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #fff;
-            color: #000;
-            text-decoration: none;
-            border: 2px solid #000;
-            border-radius: 5px;
-            margin-bottom: 30px;
-        }
-        .back-button:hover {
-            background: #000;
-            color: #fff;
+        .btn-order:hover {
+            background: #555;
         }
     </style>
 </head>
 <body>
     <div class="products-page">
-        <a href="index.html" class="back-button">← Back to Home</a>
-        
-        <div class="page-header">
-            <h1>Genjigear Products</h1>
-            <p>High-quality technology products, carefully selected. All items are 98%-100% quality at accessible prices.</p>
-        </div>
+        <header class="page-header">
+            <h1>GENJIWEAR Products</h1>
+            <p>Premium devices at unbeatable prices</p>
+        </header>
+
         <div class="product-grid">
-            <!-- Product 1: Laptop -->
+            <!-- Product 1: iPhone 14 Pro Max -->
             <div class="product-card">
-                <img src="product-technology.png" alt="High-Quality Laptop" class="product-image">
-                <h3>Premium Laptop</h3>
-                <p class="price">$899.00</p>
-                <p class="description">High-performance laptop perfect for work and entertainment. Features the latest processor, ample storage, and a stunning display. Condition: 98-100% quality.</p>
-                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-pro-max-finish-select-202209-6-7inch-deeppurple?wid=5120&hei=2880" alt="iPhone 14 Pro Max 512GB" class="product-image">
+                <h3>iPhone 14 Pro Max 512GB</h3>
+                <div class="price">฿39,900</div>
+                <p class="description">New condition, includes all original accessories</p>
+                <div class="specs">
+                    <ul>
+                        <li>• Color: Deep Purple</li>
+                        <li>• Battery Health: 100%</li>
+                        <li>• Warranty: 1 Year Apple Care</li>
+                    </ul>
+                </div>
+                <button class="btn-order">Order Now</button>
             </div>
-            <!-- Product 2: Smartphone -->
+
+            <!-- Product 2: MacBook Air M2 -->
             <div class="product-card">
-                <img src="product-technology.png" alt="Smartphone" class="product-image">
-                <h3>Premium Smartphone</h3>
-                <p class="price">$649.00</p>
-                <p class="description">Latest generation smartphone with advanced camera system, long battery life, and sleek design. Condition: 98-100% quality.</p>
-                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-20220606?wid=904&hei=840" alt="MacBook Air M2 256GB" class="product-image">
+                <h3>MacBook Air M2 256GB</h3>
+                <div class="price">฿32,900</div>
+                <p class="description">Brand new, sealed in box</p>
+                <div class="specs">
+                    <ul>
+                        <li>• Color: Midnight</li>
+                        <li>• 8GB RAM</li>
+                        <li>• 256GB SSD</li>
+                    </ul>
+                </div>
+                <button class="btn-order">Order Now</button>
             </div>
-            <!-- Product 3: Tablet -->
+
+            <!-- Product 3: iPad Pro 12.9" -->
             <div class="product-card">
-                <img src="product-technology.png" alt="Tablet" class="product-image">
-                <h3>Professional Tablet</h3>
-                <p class="price">$499.00</p>
-                <p class="description">Versatile tablet ideal for creativity and productivity. Includes stylus support and all-day battery. Condition: 98-100% quality.</p>
-                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-spacegray-202210?wid=940&hei=1112" alt="iPad Pro 12.9 inch 256GB" class="product-image">
+                <h3>iPad Pro 12.9" 256GB</h3>
+                <div class="price">฿28,900</div>
+                <p class="description">Like new, with Magic Keyboard</p>
+                <div class="specs">
+                    <ul>
+                        <li>• Color: Space Gray</li>
+                        <li>• M2 Chip</li>
+                        <li>• Includes Magic Keyboard</li>
+                    </ul>
+                </div>
+                <button class="btn-order">Order Now</button>
             </div>
-            <!-- Product 4: Smartwatch -->
+
+            <!-- Product 4: AirPods Pro 2 -->
             <div class="product-card">
-                <img src="product-technology.png" alt="Smartwatch" class="product-image">
-                <h3>Smart Watch</h3>
-                <p class="price">$299.00</p>
-                <p class="description">Feature-packed smartwatch with health tracking, notifications, and customizable watch faces. Condition: 98-100% quality.</p>
-                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=1144&hei=1144" alt="AirPods Pro 2nd Generation" class="product-image">
+                <h3>AirPods Pro (2nd Gen)</h3>
+                <div class="price">฿7,900</div>
+                <p class="description">Brand new, sealed</p>
+                <div class="specs">
+                    <ul>
+                        <li>• Active Noise Cancellation</li>
+                        <li>• Adaptive Audio</li>
+                        <li>• MagSafe Charging Case</li>
+                    </ul>
+                </div>
+                <button class="btn-order">Order Now</button>
             </div>
-            <!-- Product 5: Wireless Earbuds -->
+
+            <!-- Product 5: Apple Watch Ultra -->
             <div class="product-card">
-                <img src="product-technology.png" alt="Wireless Earbuds" class="product-image">
-                <h3>Premium Wireless Earbuds</h3>
-                <p class="price">$149.00</p>
-                <p class="description">High-quality wireless earbuds with active noise cancellation and crystal-clear sound. Condition: 98-100% quality.</p>
-                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQF93ref_VW_34FR+watch-49-titanium-ultra_VW_34FR+watch-face-49-alpine-ultra_VW_34FR?wid=1200&hei=630" alt="Apple Watch Ultra" class="product-image">
+                <h3>Apple Watch Ultra</h3>
+                <div class="price">฿24,900</div>
+                <p class="description">Excellent condition, Alpine Loop included</p>
+                <div class="specs">
+                    <ul>
+                        <li>• 49mm Titanium Case</li>
+                        <li>• GPS + Cellular</li>
+                        <li>• Orange Alpine Loop</li>
+                    </ul>
+                </div>
+                <button class="btn-order">Order Now</button>
             </div>
-            <!-- Product 6: Gaming Console -->
+
+            <!-- Product 6: Mac Studio -->
             <div class="product-card">
-                <img src="product-technology.png" alt="Gaming Console" class="product-image">
-                <h3>Gaming Console</h3>
-                <p class="price">$449.00</p>
-                <p class="description">Latest generation gaming console with 4K gaming support and extensive game library. Condition: 98-100% quality.</p>
-                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-studio-select-202203?wid=904&hei=840" alt="Mac Studio M1 Max" class="product-image">
+                <h3>Mac Studio M1 Max</h3>
+                <div class="price">฿59,900</div>
+                <p class="description">Like new, perfect for creators</p>
+                <div class="specs">
+                    <ul>
+                        <li>• M1 Max Chip</li>
+                        <li>• 32GB RAM</li>
+                        <li>• 1TB SSD</li>
+                    </ul>
+                </div>
+                <button class="btn-order">Order Now</button>
             </div>
+
             <!-- Product 7: MacBook Pro -->
             <div class="product-card">
-                <img src="859C0224-E832-4571-8332-38C7879ED230_1_105_c.jpg" alt="99% Macbook Pro 13.7 Touch Bar" class="product-image">
-                <h3>99% Macbook Pro 13.7" Touch Bar</h3>
-                <p class="price">$499</p>
-                <p class="description">MacOS 2024 Ram 16GB, 512GB SSD. Excellent condition: 99% quality.</p>
-                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
-            </div>
-        </div>
-        <!-- Payment Section -->
-        <div class="payment-section" id="payment">
-            <h2>💳 How to Order & Pay</h2>
-            <div class="payment-info">
-                <p><strong>We accept PayPal for secure and convenient payments.</strong></p>
-                
-                <div class="paypal-email">
-                    📧 PayPal: genjiwear.store@gmail.com
+                <img src="https://cdn.perplexity.ai/uploads/859C0224-E832-4571-8332-38C7879ED230_1_105_c.jpg" alt="99% Macbook Pro 13.7 Touch Bar" class="product-image">
+                <h3>MacBook Pro 13" Touch Bar</h3>
+                <div class="price">฿18,900</div>
+                <p class="description">99% condition, Touch Bar model</p>
+                <div class="specs">
+                    <ul>
+                        <li>• Intel Core i5</li>
+                        <li>• 8GB RAM</li>
+                        <li>• 256GB SSD</li>
+                        <li>• Space Gray</li>
+                    </ul>
                 </div>
-                <h3>Order Process:</h3>
-                <ol>
-                    <li><strong>Select Your Product:</strong> Choose the item you want to purchase from our collection above.</li>
-                    <li><strong>Contact Us:</strong> Send an email to <strong>genjiwear.store@gmail.com</strong> with:
-                        <ul>
-                            <li>Product name</li>
-                            <li>Your name and shipping address</li>
-                            <li>Contact phone number</li>
-                        </ul>
-                    </li>
-                    <li><strong>Payment:</strong> Send payment via PayPal to <strong>genjiwear.store@gmail.com</strong></li>
-                    <li><strong>Confirmation:</strong> We'll confirm your order and provide tracking information within 24 hours.</li>
-                    <li><strong>Delivery:</strong> Your order will be shipped within 2-3 business days.</li>
-                </ol>
-                <h3>✨ Why PayPal?</h3>
-                <ul>
-                    <li>✔️ Secure payment protection</li>
-                    <li>✔️ Buyer protection program</li>
-                    <li>✔️ Fast and easy transactions</li>
-                    <li>✔️ International payments accepted</li>
-                </ul>
-                <p style="margin-top: 20px;"><strong>Questions?</strong> Email us at <strong>genjiwear.store@gmail.com</strong> and we'll be happy to help!</p>
+                <button class="btn-order">Order Now</button>
             </div>
         </div>
     </div>
-    <script>
-        function scrollToPayment() {
-            document.getElementById('payment').scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>
