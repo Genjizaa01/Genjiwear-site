@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genjifarm Products - GENJIWEAR</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .farm-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .farm-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .farm-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .farm-header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .farm-product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .farm-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .product-image-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .farm-product-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .farm-product-card .price {
+            font-size: 1.3em;
+            color: #2ecc71;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        
+        .farm-product-card .description {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            margin: 20px auto;
+        }
+        
+        .back-button:hover {
+            background: #555;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="farm-container">
+        <div class="farm-header">
+            <h1>Genjifarm Products</h1>
+            <p>คุณภาพพรีเมียมสำหรับฟาร์มของคุณ</p>
+        </div>
+        
+        <div class="products-container">
+            <!-- Product 1: Large Hay Bale -->
+            <div class="farm-product-card">
+                <div class="product-image-placeholder">
+                    🌾 ฟางม้วนใหญ่
+                </div>
+                <h3>ฟางม้วนใหญ่</h3>
+                <p class="description">ฟางคุณภาพสูงสำหรับปศุสัตว์ ม้วนใหญ่พิเศษ เหมาะสำหรับการเลี้ยงโค ม้า และสัตว์ใหญ่อื่นๆ</p>
+                <div class="price">฿350 / ม้วน</div>
+            </div>
+            
+            <!-- Product 2: Angus Bull -->
+            <div class="farm-product-card">
+                <div class="product-image-placeholder">
+                    🐂 Angus Bull
+                </div>
+                <h3>Angus Bull (วัวพันธุ์แองกัส)</h3>
+                <p class="description">วัวพันธุ์แองกัสเพศผู้คุณภาพดี อายุ 2-3 ปี พร้อมใบรับรองสายพันธุ์ เหมาะสำหรับผสมพันธุ์</p>
+                <div class="price">฿85,000 / ตัว</div>
+            </div>
+            
+            <!-- Product 3: Angus Cow -->
+            <div class="farm-product-card">
+                <div class="product-image-placeholder">
+                    🐄 Angus Cow
+                </div>
+                <h3>Angus Cow (แม่โคแองกัส)</h3>
+                <p class="description">แม่โคพันธุ์แองกัสคุณภาพพรีเมียม อายุ 2-4 ปี สุขภาพแข็งแรง พร้อมใบรับรองสายพันธุ์</p>
+                <div class="price">฿75,000 / ตัว</div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <a href="index.html" class="back-button">← กลับหน้าแรก</a>
+        </div>
+    </div>
+</body>
+</html>
