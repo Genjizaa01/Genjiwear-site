@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - GENJIWEAR</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .products-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .product-card .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+        .product-card .description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .order-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+        .order-button:hover {
+            background: #333;
+        }
+        .payment-section {
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+        .payment-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .payment-info {
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .payment-info ol {
+            margin-left: 20px;
+        }
+        .payment-info li {
+            margin-bottom: 10px;
+        }
+        .paypal-email {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 20px 0;
+            border: 2px solid #0070ba;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            border: 2px solid #000;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .back-button:hover {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="products-page">
+        <a href="index.html" class="back-button">← Back to Home</a>
+        
+        <div class="page-header">
+            <h1>Genjigear Products</h1>
+            <p>High-quality technology products, carefully selected. All items are 98%-100% quality at accessible prices.</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1: Laptop -->
+            <div class="product-card">
+                <img src="product-technology.png" alt="High-Quality Laptop" class="product-image">
+                <h3>Premium Laptop</h3>
+                <p class="price">$899.00</p>
+                <p class="description">High-performance laptop perfect for work and entertainment. Features the latest processor, ample storage, and a stunning display. Condition: 98-100% quality.</p>
+                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+            </div>
+
+            <!-- Product 2: Smartphone -->
+            <div class="product-card">
+                <img src="product-technology.png" alt="Smartphone" class="product-image">
+                <h3>Premium Smartphone</h3>
+                <p class="price">$649.00</p>
+                <p class="description">Latest generation smartphone with advanced camera system, long battery life, and sleek design. Condition: 98-100% quality.</p>
+                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+            </div>
+
+            <!-- Product 3: Tablet -->
+            <div class="product-card">
+                <img src="product-technology.png" alt="Tablet" class="product-image">
+                <h3>Professional Tablet</h3>
+                <p class="price">$499.00</p>
+                <p class="description">Versatile tablet ideal for creativity and productivity. Includes stylus support and all-day battery. Condition: 98-100% quality.</p>
+                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+            </div>
+
+            <!-- Product 4: Smartwatch -->
+            <div class="product-card">
+                <img src="product-technology.png" alt="Smartwatch" class="product-image">
+                <h3>Smart Watch</h3>
+                <p class="price">$299.00</p>
+                <p class="description">Feature-packed smartwatch with health tracking, notifications, and customizable watch faces. Condition: 98-100% quality.</p>
+                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+            </div>
+
+            <!-- Product 5: Wireless Earbuds -->
+            <div class="product-card">
+                <img src="product-technology.png" alt="Wireless Earbuds" class="product-image">
+                <h3>Premium Wireless Earbuds</h3>
+                <p class="price">$149.00</p>
+                <p class="description">High-quality wireless earbuds with active noise cancellation and crystal-clear sound. Condition: 98-100% quality.</p>
+                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+            </div>
+
+            <!-- Product 6: Gaming Console -->
+            <div class="product-card">
+                <img src="product-technology.png" alt="Gaming Console" class="product-image">
+                <h3>Gaming Console</h3>
+                <p class="price">$449.00</p>
+                <p class="description">Latest generation gaming console with 4K gaming support and extensive game library. Condition: 98-100% quality.</p>
+                <button class="order-button" onclick="scrollToPayment()">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="payment-section" id="payment">
+            <h2>💳 How to Order & Pay</h2>
+            <div class="payment-info">
+                <p><strong>We accept PayPal for secure and convenient payments.</strong></p>
+                
+                <div class="paypal-email">
+                    📧 PayPal: genjiwear.store@gmail.com
+                </div>
+
+                <h3>Order Process:</h3>
+                <ol>
+                    <li><strong>Select Your Product:</strong> Choose the item you want to purchase from our collection above.</li>
+                    <li><strong>Contact Us:</strong> Send an email to <strong>genjiwear.store@gmail.com</strong> with:
+                        <ul>
+                            <li>Product name</li>
+                            <li>Your name and shipping address</li>
+                            <li>Contact phone number</li>
+                        </ul>
+                    </li>
+                    <li><strong>Payment:</strong> Send payment via PayPal to <strong>genjiwear.store@gmail.com</strong></li>
+                    <li><strong>Confirmation:</strong> We'll confirm your order and provide tracking information within 24 hours.</li>
+                    <li><strong>Delivery:</strong> Your order will be shipped within 2-3 business days.</li>
+                </ol>
+
+                <h3>✨ Why PayPal?</h3>
+                <ul>
+                    <li>✔️ Secure payment protection</li>
+                    <li>✔️ Buyer protection program</li>
+                    <li>✔️ Fast and easy transactions</li>
+                    <li>✔️ International payments accepted</li>
+                </ul>
+
+                <p style="margin-top: 20px;"><strong>Questions?</strong> Email us at <strong>genjiwear.store@gmail.com</strong> and we'll be happy to help!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToPayment() {
+            document.getElementById('payment').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
