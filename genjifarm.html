@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genjifarm - Farm Products</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .farm-products {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .farm-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .farm-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .farm-header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        .back-button {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back-button:hover {
+            background: #555;
+        }
+        .farm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .farm-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            background: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .farm-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .farm-item img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .farm-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .farm-item .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2a7f62;
+            margin: 15px 0;
+        }
+        .farm-item .description {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .farm-item .details {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+        .contact-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #2a7f62;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+        .contact-button:hover {
+            background: #236b52;
+        }
+    </style>
+</head>
+<body>
+    <div class="farm-products">
+        <a href="index.html" class="back-button">← Back to Home</a>
+        
+        <div class="farm-header">
+            <h1>Genjifarm Products</h1>
+            <p>Premium quality farm products for your agricultural needs</p>
+        </div>
+
+        <div class="farm-grid">
+            <!-- Product 1: Hay Bale -->
+            <div class="farm-item">
+                <img src="https://via.placeholder.com/250x250/8B7355/FFFFFF?text=Hay+Bale" alt="Large Round Hay Bale">
+                <h3>Large Round Hay Bale</h3>
+                <div class="price">$50</div>
+                <div class="description">
+                    Premium quality hay bales, perfect for livestock feeding. 
+                    Each bale is larger than a person and tightly packed for maximum value.
+                </div>
+                <div class="details">
+                    • Large round bales<br>
+                    • Dry and well-preserved<br>
+                    • Suitable for horses, cattle, and other livestock<br>
+                    • Price per bale
+                </div>
+                <a href="#contact" class="contact-button">Contact for Order</a>
+            </div>
+
+            <!-- Product 2: Angus Bull -->
+            <div class="farm-item">
+                <img src="https://via.placeholder.com/250x250/2C1810/FFFFFF?text=Angus+Bull" alt="Angus Bull">
+                <h3>Angus Bull</h3>
+                <div class="price">$4,000</div>
+                <div class="description">
+                    Premium male Angus bull, fully mature and ready for breeding. 
+                    Excellent genetics and proven lineage.
+                </div>
+                <div class="details">
+                    • Male (Bull)<br>
+                    • Fully mature<br>
+                    • Excellent health and temperament<br>
+                    • Strong breeding stock<br>
+                    • Price per animal
+                </div>
+                <a href="#contact" class="contact-button">Contact for Order</a>
+            </div>
+
+            <!-- Product 3: Angus Cow -->
+            <div class="farm-item">
+                <img src="https://via.placeholder.com/250x250/2C1810/FFFFFF?text=Angus+Cow" alt="Angus Cow">
+                <h3>Angus Cow</h3>
+                <div class="price">$3,000</div>
+                <div class="description">
+                    Premium female Angus cow, excellent for breeding or dairy production. 
+                    Healthy and well-maintained.
+                </div>
+                <div class="details">
+                    • Female (Cow)<br>
+                    • Mature and healthy<br>
+                    • Good milk production<br>
+                    • Calm temperament<br>
+                    • Price per animal
+                </div>
+                <a href="#contact" class="contact-button">Contact for Order</a>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" style="margin-top: 60px; padding: 40px; background: #f5f5f5; border-radius: 8px; text-align: center;">
+            <h2 style="margin-bottom: 20px;">Contact Us for Orders</h2>
+            <p style="margin-bottom: 20px; color: #666;">Interested in our farm products? Get in touch with us for pricing, availability, and delivery options.</p>
+            <p style="font-size: 1.2rem;">Email: <a href="mailto:contact@genjifarm.com" style="color: #2a7f62; text-decoration: none;">contact@genjifarm.com</a></p>
+            <p style="margin-top: 20px;">
+                <a href="index.html" class="back-button">Return to Homepage</a>
+            </p>
+        </section>
+    </div>
+</body>
+</html>
