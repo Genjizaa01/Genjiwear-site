@@ -61,108 +61,105 @@
             width: 100%;
             height: 250px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 5px;
             margin-bottom: 15px;
         }
-        .product-info {
-            text-align: center;
-        }
-        .product-info h3 {
+        .product-card h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
-        .price {
+        .product-price {
             font-size: 1.8rem;
-            color: #2ecc71;
+            color: #007bff;
             font-weight: bold;
             margin: 10px 0;
+        }
+        .product-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .order-button {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .order-button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
     <div class="products-page">
         <a href="index.html" class="back-button">← Back to Home</a>
+        
         <div class="page-header">
             <h1>Our Products</h1>
             <p>Discover our premium collection of tech products</p>
         </div>
+        
         <div class="product-grid">
+            <!-- iPhone Product Card -->
             <div class="product-card">
-                <h2>เลือก iPhone</h2>
-                <form>
-                  <label for="modelType">ชนิด:</label>
-                  <select id="modelType" name="modelType">
-                    <option value="ธรรมดา">ธรรมดา</option>
-                    <option value="โปร">โปร</option>
-                    <option value="โปรแม๊ก">โปรแม๊ก</option>
-                  </select>
-                  <br><br>
-                  <label for="modelNumber">รุ่น:</label>
-                  <select id="modelNumber" name="modelNumber">
-                    <option value="11">iPhone 11</option>
-                    <option value="12">iPhone 12</option>
-                    <option value="13">iPhone 13</option>
-                    <option value="14">iPhone 14</option>
-                    <option value="15">iPhone 15</option>
-                    <option value="16">iPhone 16</option>
-                  </select>
-                  <br><br>
-                  <label for="capacity">ความจุ:</label>
-                  <select id="capacity" name="capacity">
-                    <option value="64">64 GB</option>
-                    <option value="128">128 GB</option>
-                    <option value="256">256 GB</option>
-                    <option value="512">512 GB</option>
-                    <option value="1TB">1 TB</option>
-                  </select>
-                  <br><br>
-                  <button type="submit">สั่งซื้อ</button>
-                </form>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845702781" alt="iPhone 15 Pro" class="product-image">
+                <h3>iPhone 15 Pro</h3>
+                <div class="product-price">$999</div>
+                <p class="product-description">The latest flagship iPhone with A17 Pro chip, titanium design, and advanced camera system.</p>
+                <button class="order-button">Order Now</button>
             </div>
+
+            <!-- AirPods Pro -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500" alt="AirPods Pro" class="product-image">
-                <div class="product-info">
-                    <h3>AirPods Pro (2nd Gen)</h3>
-                    <p class="price">$249</p>
-                    <p>Premium wireless earbuds with active noise cancellation and spatial audio.</p>
-                    <button style="background:green;color:white;padding:8px 20px;border:none;border-radius:6px;cursor:pointer;">Order Now</button>
-                </div>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1660803972361" alt="AirPods Pro" class="product-image">
+                <h3>AirPods Pro (2nd Gen)</h3>
+                <div class="product-price">$249</div>
+                <p class="product-description">Premium wireless earbuds with active noise cancellation and spatial audio.</p>
+                <button class="order-button">Order Now</button>
             </div>
+
+            <!-- MacBook Pro -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=500" alt="MacBook Pro" class="product-image">
-                <div class="product-info">
-                    <h3>MacBook Pro 14"</h3>
-                    <p class="price">$1,999</p>
-                    <p>Powerful laptop with M3 chip, stunning Liquid Retina XDR display, and all-day battery life.</p>
-                    <button style="background:green;color:white;padding:8px 20px;border:none;border-radius:6px;cursor:pointer;">Order Now</button>
-                </div>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202310?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1697230830200" alt="MacBook Pro" class="product-image">
+                <h3>MacBook Pro 14"</h3>
+                <div class="product-price">$1,999</div>
+                <p class="product-description">Powerful laptop with M3 chip, stunning Liquid Retina XDR display, and all-day battery life.</p>
+                <button class="order-button">Order Now</button>
             </div>
+
+            <!-- Apple Watch -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=500" alt="Apple Watch" class="product-image">
-                <div class="product-info">
-                    <h3>Apple Watch Series 9</h3>
-                    <p class="price">$399</p>
-                    <p>Advanced health monitoring, fitness tracking, and seamless iPhone integration.</p>
-                    <button style="background:green;color:white;padding:8px 20px;border:none;border-radius:6px;cursor:pointer;">Order Now</button>
-                </div>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-s9-202309?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1692896370059" alt="Apple Watch" class="product-image">
+                <h3>Apple Watch Series 9</h3>
+                <div class="product-price">$399</div>
+                <p class="product-description">Advanced health monitoring, fitness tracking, and seamless iPhone integration.</p>
+                <button class="order-button">Order Now</button>
             </div>
+
+            <!-- iPad Air -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1544244015-9c72fd9c866d?w=500" alt="iPad Air" class="product-image">
-                <div class="product-info">
-                    <h3>iPad Air</h3>
-                    <p class="price">$599</p>
-                    <p>Versatile tablet with M1 chip, perfect for work and entertainment on the go.</p>
-                    <button style="background:green;color:white;padding:8px 20px;border:none;border-radius:6px;cursor:pointer;">Order Now</button>
-                </div>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-select-wifi-blue-202203?wid=940&hei=1112&fmt=p-jpg&qlt=95&.v=1645065732688" alt="iPad Air" class="product-image">
+                <h3>iPad Air</h3>
+                <div class="product-price">$599</div>
+                <p class="product-description">Versatile tablet with M1 chip, perfect for work and entertainment on the go.</p>
+                <button class="order-button">Order Now</button>
             </div>
+
+            <!-- Magic Keyboard -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=500" alt="Magic Keyboard" class="product-image">
-                <div class="product-info">
-                    <h3>Magic Keyboard</h3>
-                    <p class="price">$99</p>
-                    <p>Wireless keyboard with rechargeable battery and seamless Mac connectivity.</p>
-                    <button style="background:green;color:white;padding:8px 20px;border:none;border-radius:6px;cursor:pointer;">Order Now</button>
-                </div>
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK2A3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1628010471000" alt="Magic Keyboard" class="product-image">
+                <h3>Magic Keyboard</h3>
+                <div class="product-price">$99</div>
+                <p class="product-description">Wireless keyboard with rechargeable battery and seamless Mac connectivity.</p>
+                <button class="order-button">Order Now</button>
             </div>
         </div>
     </div>
