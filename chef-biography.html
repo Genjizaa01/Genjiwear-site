@@ -1,0 +1,134 @@
+chef-biography.html<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chef Genji - Biography</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a1a; color: #fff; line-height: 1.6; }
+    
+    header { background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%); padding: 40px 20px; text-align: center; border-bottom: 3px solid #f28727; }
+    header h1 { font-size: 3em; margin-bottom: 10px; color: #f28727; }
+    header p { font-size: 1.2em; color: #bbb; }
+    
+    nav { background: #222; padding: 15px; text-align: center; }
+    nav a { color: #f28727; text-decoration: none; margin: 0 20px; font-weight: bold; transition: 0.3s; }
+    nav a:hover { color: #fff; }
+    
+    .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+    
+    .bio-section { background: #2c2c2c; padding: 30px; border-radius: 10px; margin-bottom: 30px; border-left: 5px solid #f28727; }
+    .bio-section h2 { font-size: 1.8em; margin-bottom: 15px; color: #f28727; }
+    .bio-section p { font-size: 1.1em; margin-bottom: 10px; color: #ddd; }
+    
+    .bio-details { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px; }
+    .detail-item { background: #1a1a1a; padding: 15px; border-radius: 8px; border-left: 3px solid #f28727; }
+    .detail-item strong { color: #f28727; }
+    
+    .experience { background: #2c2c2c; padding: 30px; border-radius: 10px; margin-bottom: 30px; border-left: 5px solid #7b4208; }
+    .experience h2 { font-size: 1.8em; margin-bottom: 15px; color: #7b4208; }
+    .exp-item { background: #1a1a1a; padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 3px solid #7b4208; }
+    .exp-item h3 { color: #f28727; margin-bottom: 5px; }
+    .exp-item p { color: #bbb; font-size: 0.95em; }
+    
+    footer { text-align: center; padding: 30px; background: #1a1a1a; border-top: 2px solid #f28727; margin-top: 50px; }
+    footer p { color: #888; }
+    
+    @media (max-width: 600px) {
+      .bio-details { grid-template-columns: 1fr; }
+      header h1 { font-size: 2em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chef Genji</h1>
+    <p>Sushi Artisan & Japanese Culinary Expert</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#biography">Biography</a>
+    <a href="#experience">Experience</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- Biography Section -->
+    <section class="bio-section" id="biography">
+      <h2>About Chef Genji</h2>
+      <p>Chef Genji is a passionate and dedicated sushi artisan with extensive expertise in Japanese culinary arts. With a unique blend of traditional techniques and modern innovation, Chef Genji creates authentic Japanese dining experiences that captivate the palate.</p>
+      
+      <div class="bio-details">
+        <div class="detail-item">
+          <strong>Birth Place:</strong> Thailand
+        </div>
+        <div class="detail-item">
+          <strong>Date of Birth:</strong> October 1990
+        </div>
+        <div class="detail-item">
+          <strong>Age:</strong> 35 years old
+        </div>
+        <div class="detail-item">
+          <strong>Current Status:</strong> Master Sushi Chef
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="bio-section">
+      <h2>Education</h2>
+      <div class="bio-details">
+        <div class="detail-item">
+          <strong>Primary Education:</strong><br>
+          Bachelor's Degree in Communication Arts (Com-Art)<br>
+          UTCC (University of the Thai Chamber of Commerce), Thailand
+        </div>
+        <div class="detail-item">
+          <strong>Culinary Education:</strong><br>
+          Bachelor's Degree in Culinary Arts<br>
+          Florida Institute of Culinary Arts, USA
+        </div>
+      </div>
+      <p style="margin-top: 20px; color: #f28727; font-style: italic;">Chef Genji's unique combination of design and culinary expertise allows him to create not only exceptional sushi dishes but also visually stunning presentations that elevate the dining experience.</p>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+      <h2>Professional Experience</h2>
+      
+      <div class="exp-item">
+        <h3>🍣 Sushi Artistry & Craftsmanship</h3>
+        <p>Mastered traditional Japanese sushi techniques including knife skills, rice preparation, and ingredient selection. Specializes in Nigiri, Maki, Sashimi, and innovative fusion rolls.</p>
+      </div>
+      
+      <div class="exp-item">
+        <h3>🎨 Design & Presentation</h3>
+        <p>Combines Communication Arts background with culinary skills to create visually stunning presentations. Each dish is a masterpiece that tells a story through color, composition, and arrangement.</p>
+      </div>
+      
+      <div class="exp-item">
+        <h3>🌍 International Expertise</h3>
+        <p>Trained in Florida, USA, bringing international standards and fresh perspectives to Japanese culinary traditions. Understands diverse palates and cultural dining preferences.</p>
+      </div>
+      
+      <div class="exp-item">
+        <h3>📚 Culinary Innovation</h3>
+        <p>Constantly exploring new flavor combinations and cooking techniques while respecting traditional Japanese culinary principles. Creates seasonal menus featuring premium, fresh ingredients.</p>
+      </div>
+      
+      <div class="exp-item">
+        <h3>👨‍🏫 Teaching & Mentoring</h3>
+        <p>Founder of Chef Genji Sushi School, dedicated to teaching the art of authentic sushi preparation to aspiring chefs and culinary enthusiasts worldwide.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Chef Genji - Japanese Culinary Arts. All rights reserved.</p>
+    <p style="margin-top: 10px; color: #f28727;">📞 Call: <strong>346-684-9997</strong> | 🌐 www.Genjiwear.net</p>
+  </footer>
+</body>
+</html>
