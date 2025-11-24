@@ -6,6 +6,11 @@ a { color: #111; text-decoration: none; }
 
 /* Hero section */
 .hero { background: #f4f4f4; padding: 60px 20px; text-align: center; }
+    background-image: url('ichiban-sushi-collage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 .hero .navbar { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .hero .logo { font-size: 24px; font-weight: bold; }
 .hero .nav-links { list-style: none; display: flex; gap: 20px; }
