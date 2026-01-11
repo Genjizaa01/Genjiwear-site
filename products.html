@@ -164,4 +164,305 @@
         </div>
     </div>
 </body>
+    
+<!-- Order Form Modal -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>สั่งซื้อสินค้า</h2>
+        <p class="modal-subtitle">กรุณากรอกข้อมูลและแนบหลักฐานการโอนเงิน</p>
+        
+        <!-- Payment Info -->
+        <div class="payment-info">
+            <h3>ข้อมูลการชำระเงิน:</h3>
+            <p><strong>เบอร์โทรศัพท์:</strong> 346-839-5691</p>
+            <p><strong>บัญชี PayPal:</strong> Genjiwear.store@gmail.com</p>
+            <p><strong>อีเมลติดต่อ:</strong> Genjiwear.store@gmail.com</p>
+        </div>
+
+        <form id="orderForm" enctype="multipart/form-data">
+            <input type="hidden" id="productName" name="product_name">
+            <input type="hidden" id="productPrice" name="product_price">
+            
+            <div class="form-group">
+                <label for="customerName">ชื่อ-นามสกุล *</label>
+                <input type="text" id="customerName" name="customer_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="customerEmail">อีเมล *</label>
+                <input type="email" id="customerEmail" name="customer_email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="customerPhone">เบอร์โทรศัพท์ *</label>
+                <input type="tel" id="customerPhone" name="customer_phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="transactionId">เลขทรานแซ็กชัน (Transaction ID) *</label>
+                <input type="text" id="transactionId" name="transaction_id" required placeholder="กรอกเลขทรานแซ็กชันจากการโอนเงิน">
+            </div>
+
+            <div class="form-group">
+                <label for="shippingAddress">ที่อยู่จัดส่ง *</label>
+                <textarea id="shippingAddress" name="shipping_address" rows="4" required placeholder="บ้านเลขที่, ถนน, ตำบล/แขวง, อำเภอ/เขต, จังหวัด, รหัสไปรษณีย์"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentSlip">แนบสลิปโอนเงิน *</label>
+                <input type="file" id="paymentSlip" name="payment_slip" accept="image/*" required>
+                <small>รองรับไฟล์: JPG, PNG, GIF (ขนาดไม่เกิน 5MB)</small>
+            </div>
+
+            <div class="form-group">
+                <label for="orderNotes">หมายเหตุ (ถ้ามี)</label>
+                <textarea id="orderNotes" name="order_notes" rows="3" placeholder="ข้อความเพิ่มเติม"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">ยืนยันการสั่งซื้อ</button>
+        </form>
+    </div>
+</div>
+
+<style>
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+.modal h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.modal-subtitle {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.payment-info {
+    background: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #007bff;
+}
+
+.payment-info h3 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 1.1rem;
+}
+
+.payment-info p {
+    margin: 8px 0;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+</style>
+
+<script>
+// Get modal elements
+const modal = document.getElementById('orderModal');
+const closeBtn = document.getElementsByClassName('close')[0];
+const orderButtons = document.getElementsByClassName('order-button');
+const orderForm = document.getElementById('orderForm');
+
+// Add click event to all "Order Now" buttons
+const setupOrderButtons = () => {
+    const allOrderButtons = document.querySelectorAll('.order-button, button.order-button, button[class*="order"]');
+    
+    allOrderButtons.forEach((btn, index) => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get product info from the card
+            const productCard = this.closest('.product-card');
+            const productName = productCard.querySelector('h3') ? productCard.querySelector('h3').textContent : 'Product';
+            const productPrice = productCard.querySelector('.product-price') ? productCard.querySelector('.product-price').textContent : 'N/A';
+            
+            // Set product info in hidden fields
+            document.getElementById('productName').value = productName;
+            document.getElementById('productPrice').value = productPrice;
+            
+            // Show modal
+            modal.style.display = 'block';
+        });
+    });
+};
+
+// Close modal when clicking X
+closeBtn.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Handle form submission
+orderForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitBtn = orderForm.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'กำลังส่งข้อมูล...';
+    
+    try {
+        const formData = new FormData(orderForm);
+        
+        // Create email body
+        const productName = document.getElementById('productName').value;
+        const productPrice = document.getElementById('productPrice').value;
+        const customerName = document.getElementById('customerName').value;
+        const customerEmail = document.getElementById('customerEmail').value;
+        const customerPhone = document.getElementById('customerPhone').value;
+        const transactionId = document.getElementById('transactionId').value;
+        const shippingAddress = document.getElementById('shippingAddress').value;
+        const orderNotes = document.getElementById('orderNotes').value;
+        
+        const emailBody = `
+=== คำสั่งซื้อใหม่จาก GENJIWEAR ===
+
+สินค้า: ${productName}
+ราคา: ${productPrice}
+
+=== ข้อมูลลูกค้า ===
+ชื่อ: ${customerName}
+อีเมล: ${customerEmail}
+เบอร์โทร: ${customerPhone}
+
+=== ข้อมูลการชำระเงิน ===
+เลขทรานแซ็กชัน: ${transactionId}
+
+=== ที่อยู่จัดส่ง ===
+${shippingAddress}
+
+=== หมายเหตุ ===
+${orderNotes || 'ไม่มี'}
+
+=== สลิปโอนเงิน ===
+กรุณาตรวจสอบไฟล์แนบ
+        `;
+        
+        // Send email using EmailJS or mailto (simple solution)
+        const mailtoLink = `mailto:Genjiwear.store@gmail.com?subject=คำสั่งซื้อใหม่: ${productName}&body=${encodeURIComponent(emailBody)}`;
+        window.location.href = mailtoLink;
+        
+        // Show success message
+        alert('กรุณาส่งอีเมลพร้อมแนบสลิปโอนเงินด้วยค่ะ\n\nระบบจะเปิดโปรแกรมอีเมลของคุณโดยอัตโนมัติ');
+        
+        // Reset form and close modal
+        orderForm.reset();
+        modal.style.display = 'none';
+        
+    } catch (error) {
+        console.error('Error:', error);
+        alert('เกิดข้อผิดพลาด กรุณาติดต่อเราโดยตรงที่: Genjiwear.store@gmail.com');
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'ยืนยันการสั่งซื้อ';
+    }
+});
+
+// Initialize when page loads
+window.addEventListener('DOMContentLoaded', (event) => {
+    setupOrderButtons();
+});
+</script>
+
 </html>
