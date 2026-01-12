@@ -11,11 +11,22 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
-            background-image: url('5D8751FC-2D82-4F91-B414-1B56F057BB66_1_105_c.jpeg');                        background-size: cover;
-                        background-position: center;
-                        background-attachment: fixed;
-                        background-repeat: no-repeat;
-        }
+        .hero-section {
+                        width: 100%;
+                        height: 400px;
+                        overflow: hidden;
+                        margin: 0 auto 40px;
+                        border-radius: 10px;
+                    }
+                    .hero-section img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+
+
+
+}
         .back-button {
             display: inline-block;
             background: #333;
@@ -227,6 +238,10 @@
 </head>
 <body>
     <div class="products-page">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                        <img src="5D8751FC-2D82-4F91-B414-1B56F057BB66_1_105_c.jpeg" alt="GENJIWEAR Products">
+                    </div>
         <a href="index.html" class="back-button">← Back to Home</a>
 
         <div class="page-header">
