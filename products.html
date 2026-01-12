@@ -51,28 +51,32 @@
             border-radius: 8px;
             padding: 20px;
             background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
-        .product-card img {
+        .product-image {
             width: 100%;
-            height: auto;
-            border-radius: 8px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
             margin-bottom: 15px;
         }
-        .product-card h2 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .product-card .price {
+        .product-card h3 {
             font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 1.8rem;
             color: #007bff;
             font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-description {
+            color: #666;
+            line-height: 1.6;
             margin-bottom: 15px;
         }
         .product-card select {
@@ -83,10 +87,132 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
-        .product-card p {
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 10px;
+        .order-button {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .order-button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 2% auto;
+            padding: 30px;
+            border: 1px solid #888;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+        }
+        .modal h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .modal-subtitle {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .payment-info {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007bff;
+        }
+        .payment-info h3 {
+            margin-top: 0;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+        .payment-info p {
+            margin: 8px 0;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group small {
+            display: block;
+            margin-top: 5px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .submit-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
         }
         hr {
             border: none;
@@ -104,12 +230,13 @@
             <p>Discover our premium collection of Apple devices and accessories.</p>
         </div>
 
-        <!-- 1. MacBook Pro 13" -->
+        <!-- MacBook Pro Products -->
         <div class="product-grid">
+            <!-- 1. MacBook Pro 13" -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80" alt="MacBook Pro 13 inch">
-                <h2>MacBook Pro 13"</h2>
-                <p class="price">Starting from $899</p>
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80" alt="MacBook Pro 13 inch" class="product-image">
+                <h3>MacBook Pro 13"</h3>
+                <p class="product-price">Starting from $899</p>
                 
                 <label for="mbp13-spec"><strong>Choose your configuration:</strong></label>
                 <select id="mbp13-spec" name="mbp13-spec">
@@ -119,14 +246,15 @@
                     <option value="13-32-512-i7">13" | 32GB RAM | 512GB SSD | Intel Core i7</option>
                 </select>
 
-                <p>A compact yet powerful MacBook Pro 13" designed for everyday professionals who need reliable performance in a portable form factor. It features a sharp Retina display, Touch Bar, and fast SSD storage for smooth multitasking throughout the day.</p>
+                <p class="product-description">A compact yet powerful MacBook Pro 13" designed for everyday professionals who need reliable performance in a portable form factor. It features a sharp Retina display, Touch Bar, and fast SSD storage for smooth multitasking throughout the day.</p>
+                <button class="order-button">Order Now</button>
             </div>
 
             <!-- 2. MacBook Pro 15" -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=900&q=80" alt="MacBook Pro 15 inch">
-                <h2>MacBook Pro 15"</h2>
-                <p class="price">Starting from $1,099</p>
+                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=900&q=80" alt="MacBook Pro 15 inch" class="product-image">
+                <h3>MacBook Pro 15"</h3>
+                <p class="product-price">Starting from $1,099</p>
 
                 <label for="mbp15-spec"><strong>Choose your configuration:</strong></label>
                 <select id="mbp15-spec" name="mbp15-spec">
@@ -136,14 +264,15 @@
                     <option value="15-32-512-i9">15" | 32GB RAM | 512GB SSD | Intel Core i9</option>
                 </select>
 
-                <p>The MacBook Pro 15" is built for creators and power users who need more screen space and stronger performance. With Intel Core i7 or i9 processors, dedicated graphics options, and a vibrant Retina display, it is ideal for editing, design, and demanding workloads.</p>
+                <p class="product-description">The MacBook Pro 15" is built for creators and power users who need more screen space and stronger performance. With Intel Core i7 or i9 processors, dedicated graphics options, and a vibrant Retina display, it is ideal for editing, design, and demanding workloads.</p>
+                <button class="order-button">Order Now</button>
             </div>
 
             <!-- 3. MacBook Pro 16" -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1517055729445-fa7d27394b85?auto=format&fit=crop&w=900&q=80" alt="MacBook Pro 16 inch">
-                <h2>MacBook Pro 16"</h2>
-                <p class="price">Starting from $1,299</p>
+                <img src="https://images.unsplash.com/photo-1517055729445-fa7d27394b85?auto=format&fit=crop&w=900&q=80" alt="MacBook Pro 16 inch" class="product-image">
+                <h3>MacBook Pro 16"</h3>
+                <p class="product-price">Starting from $1,299</p>
 
                 <label for="mbp16-spec"><strong>Choose your configuration:</strong></label>
                 <select id="mbp16-spec" name="mbp16-spec">
@@ -153,43 +282,191 @@
                     <option value="16-64-1tb-i9">16" | 64GB RAM | 1TB SSD | Intel Core i9</option>
                 </select>
 
-                <p>The MacBook Pro 16" delivers desktop-class performance in a portable body, perfect for professionals working with video editing, 3D rendering, music production, and software development. Its large Retina display, high RAM capacity, and fast SSD ensure a smooth, responsive experience even under heavy workloads.</p>
+                <p class="product-description">The MacBook Pro 16" delivers desktop-class performance in a portable body, perfect for professionals working with video editing, 3D rendering, music production, and software development. Its large Retina display, high RAM capacity, and fast SSD ensure a smooth, responsive experience even under heavy workloads.</p>
+                <button class="order-button">Order Now</button>
             </div>
         </div>
 
         <hr>
 
-        <!-- 4. AirPods Max -->
+        <!-- Accessories -->
         <div class="product-grid">
+            <!-- 4. AirPods Max -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?auto=format&fit=crop&w=900&q=80" alt="AirPods Max">
-                <h2>AirPods Max</h2>
-                <p class="price">$350</p>
+                <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?auto=format&fit=crop&w=900&q=80" alt="AirPods Max" class="product-image">
+                <h3>AirPods Max</h3>
+                <p class="product-price">$350</p>
 
-                <p>AirPods Max are premium over-ear headphones that combine high-fidelity audio with advanced Active Noise Cancellation and Transparency mode. They deliver rich, detailed sound with Personalized Spatial Audio, making movies, music, and games feel immersive and lifelike.</p>
+                <p class="product-description">AirPods Max are premium over-ear headphones that combine high-fidelity audio with advanced Active Noise Cancellation and Transparency mode. They deliver rich, detailed sound with Personalized Spatial Audio, making movies, music, and games feel immersive and lifelike.</p>
                 
-                <p>With a comfortable stainless steel frame, soft ear cushions, and up to 20 hours of listening time, they are designed for all-day use at home, in the studio, or on the go.</p>
+                <p class="product-description">With a comfortable stainless steel frame, soft ear cushions, and up to 20 hours of listening time, they are designed for all-day use at home, in the studio, or on the go.</p>
+                <button class="order-button">Order Now</button>
             </div>
 
             <!-- 5. iPad Keyboard -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=80" alt="iPad keyboard">
-                <h2>iPad Keyboard</h2>
-                <p class="price">$100</p>
+                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=80" alt="iPad keyboard" class="product-image">
+                <h3>iPad Keyboard</h3>
+                <p class="product-price">$100</p>
 
-                <p>This iPad keyboard transforms your tablet into a more productive workstation, offering a responsive typing experience for writing, studying, and managing daily tasks. It connects quickly, supports stable input, and is optimized for long sessions.</p>
+                <p class="product-description">This iPad keyboard transforms your tablet into a more productive workstation, offering a responsive typing experience for writing, studying, and managing daily tasks. It connects quickly, supports stable input, and is optimized for long sessions.</p>
                 
-                <p>The slim, lightweight design protects your iPad while keeping it easy to carry, making it an excellent choice for students, professionals, and creators who work on the move.</p>
+                <p class="product-description">The slim, lightweight design protects your iPad while keeping it easy to carry, making it an excellent choice for students, professionals, and creators who work on the move.</p>
+                <button class="order-button">Order Now</button>
             </div>
         </div>
     </div>
 
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Order Product</h2>
+            <p class="modal-subtitle">Please fill in the information and attach payment proof</p>
+
+            <!-- Payment Info -->
+            <div class="payment-info">
+                <h3>Payment Information:</h3>
+                <p><strong>Phone:</strong> 346-839-5691</p>
+                <p><strong>PayPal Account:</strong> Genjiwear.store@gmail.com</p>
+                <p><strong>Contact Email:</strong> Genjiwear.store@gmail.com</p>
+                <p><strong>🚚 Shipping:</strong> FREE in US Only</p>
+                <p><strong>International Shipping:</strong> +$120 (Flat Rate)</p>
+            </div>
+
+            <!-- Order Form -->
+            <form id="orderForm">
+                <input type="hidden" id="productName" name="product_name">
+                <input type="hidden" id="productPrice" name="product_price">
+
+                <div class="form-group">
+                    <label for="customerName">Full Name *</label>
+                    <input type="text" id="customerName" name="customer_name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="customerEmail">Email *</label>
+                    <input type="email" id="customerEmail" name="customer_email" required placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number *</label>
+                    <input type="tel" id="customerPhone" name="customer_phone" required placeholder="+1 (123) 456-7890">
+                </div>
+
+                <div class="form-group">
+                    <label for="shippingAddress">Shipping Address *</label>
+                    <textarea id="shippingAddress" name="shipping_address" rows="3" required placeholder="Enter your complete shipping address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="transactionId">Transaction ID *</label>
+                    <input type="text" id="transactionId" name="transaction_id" required placeholder="Enter transaction ID from payment">
+                    <small>Transaction ID from your PayPal payment</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentSlip">Attach Payment Slip *</label>
+                    <input type="file" id="paymentSlip" name="payment_slip" accept="image/*" required>
+                    <small>Supported files: JPG, PNG, GIF (Max 5MB)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="orderNotes">Notes (Optional)</label>
+                    <textarea id="orderNotes" name="order_notes" rows="3" placeholder="Any special instructions or notes"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
     <script>
-        // Optional: Add functionality for dropdown selection tracking
-        document.querySelectorAll('select').forEach(select => {
-            select.addEventListener('change', function() {
-                console.log('Selected:', this.value);
+        // Get modal elements
+        const modal = document.getElementById('orderModal');
+        const closeBtn = document.getElementsByClassName('close')[0];
+        const orderButtons = document.getElementsByClassName('order-button');
+        const orderForm = document.getElementById('orderForm');
+
+        // Add click event to all "Order Now" buttons
+        const setupOrderButtons = () => {
+            const allOrderButtons = document.querySelectorAll('.order-button, button.order-button');
+            allOrderButtons.forEach((btn) => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get product info from the card
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('h3') ? productCard.querySelector('h3').textContent : 'Product';
+                    const productPrice = productCard.querySelector('.product-price') ? productCard.querySelector('.product-price').textContent : 'N/A';
+                    
+                    // Set product info in hidden fields
+                    document.getElementById('productName').value = productName;
+                    document.getElementById('productPrice').value = productPrice;
+                    
+                    // Show modal
+                    modal.style.display = 'block';
+                });
             });
+        };
+
+        // Close modal when clicking X
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Handle form submission
+        orderForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = orderForm.querySelector('.submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            try {
+                const formData = new FormData(orderForm);
+                
+                // Create email body
+                const productName = document.getElementById('productName').value;
+                const productPrice = document.getElementById('productPrice').value;
+                const customerName = document.getElementById('customerName').value;
+                const customerEmail = document.getElementById('customerEmail').value;
+                const customerPhone = document.getElementById('customerPhone').value;
+                const transactionId = document.getElementById('transactionId').value;
+                const shippingAddress = document.getElementById('shippingAddress').value;
+                const orderNotes = document.getElementById('orderNotes').value;
+                
+                const emailBody = `=== NEW ORDER FROM GENJIWEAR ===\n\nProduct: ${productName}\nPrice: ${productPrice}\n\n=== CUSTOMER INFORMATION ===\nName: ${customerName}\nEmail: ${customerEmail}\nPhone: ${customerPhone}\n\n=== PAYMENT INFORMATION ===\nTransaction ID: ${transactionId}\n\n=== SHIPPING ADDRESS ===\n${shippingAddress}\n\n=== NOTES ===\n${orderNotes || 'None'}\n\n=== PAYMENT SLIP ===\nPlease check the attached file`;
+                
+                // Send email using mailto (simple solution)
+                const mailtoLink = `mailto:Genjiwear.store@gmail.com?subject=คำสั่งซื้อใหม่: ${productName}&body=${encodeURIComponent(emailBody)}`;
+                window.location.href = mailtoLink;
+                
+                // Show success message
+                alert('กรุณาส่งอีเมลพร้อมแนบสลิปการชำระเงินด้วยค่ะ\n\nระบบจะเปิดโปรแกรมอีเมลของคุณโดยอัตโนมัติ');
+                
+                // Reset form and close modal
+                orderForm.reset();
+                modal.style.display = 'none';
+            } catch (error) {
+                console.error('Error:', error);
+                alert('เกิดข้อผิดพลาด กรุณาติดต่อเราโดยตรงที่: Genjiwear.store@gmail.com');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Confirm Order';
+            }
+        });
+
+        // Initialize when page loads
+        window.addEventListener('DOMContentLoaded', (event) => {
+            setupOrderButtons();
         });
     </script>
 </body>
