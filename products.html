@@ -1,4 +1,3 @@
-172
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,418 +51,146 @@
             border-radius: 8px;
             padding: 20px;
             background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
-        .product-image {
+        .product-card img {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 5px;
+            height: auto;
+            border-radius: 8px;
             margin-bottom: 15px;
         }
-        .product-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        .product-price {
+        .product-card h2 {
             font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .product-card .price {
+            font-size: 1.5rem;
             color: #007bff;
             font-weight: bold;
-            margin: 10px 0;
-        }
-        .product-description {
-            color: #666;
-            line-height: 1.6;
             margin-bottom: 15px;
         }
-        .order-button {
-            display: inline-block;
-            background: #007bff;
-            color: #fff;
-            text-decoration: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease, transform 0.2s ease;
-            border: none;
-            cursor: pointer;
+        .product-card select {
+            width: 100%;
+            padding: 10px;
             font-size: 1rem;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
-        .order-button:hover {
-            background: #0056b3;
-            transform: translateY(-2px);
+        .product-card p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #eee;
+            margin: 40px 0;
         }
     </style>
 </head>
 <body>
     <div class="products-page">
         <a href="index.html" class="back-button">← Back to Home</a>
-        
+
         <div class="page-header">
             <h1>Our Products</h1>
-            <p>Discover our premium collection of tech products</p>
+            <p>Discover our premium collection of Apple devices and accessories.</p>
         </div>
-        
+
+        <!-- 1. MacBook Pro 13" -->
         <div class="product-grid">
-            <!-- iPhone Product Card -->
             <div class="product-card">
-                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845702781" alt="iPhone 15 Pro" class="product-image">
-                <h3>iPhone 15 Pro</h3>
-                <div class="product-price">$999</div>
-                <p class="product-description">The latest flagship iPhone with A17 Pro chip, titanium design, and advanced camera system.</p>
-                <button class="order-button">Order Now</button>
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80" alt="MacBook Pro 13 inch">
+                <h2>MacBook Pro 13"</h2>
+                <p class="price">Starting from $899</p>
+                
+                <label for="mbp13-spec"><strong>Choose your configuration:</strong></label>
+                <select id="mbp13-spec" name="mbp13-spec">
+                    <option value="13-16-256-i5">13" | 16GB RAM | 256GB SSD | Intel Core i5</option>
+                    <option value="13-16-512-i5">13" | 16GB RAM | 512GB SSD | Intel Core i5</option>
+                    <option value="13-32-256-i7">13" | 32GB RAM | 256GB SSD | Intel Core i7</option>
+                    <option value="13-32-512-i7">13" | 32GB RAM | 512GB SSD | Intel Core i7</option>
+                </select>
+
+                <p>A compact yet powerful MacBook Pro 13" designed for everyday professionals who need reliable performance in a portable form factor. It features a sharp Retina display, Touch Bar, and fast SSD storage for smooth multitasking throughout the day.</p>
             </div>
 
-            <!-- AirPods Pro -->
+            <!-- 2. MacBook Pro 15" -->
             <div class="product-card">
-                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1660803972361" alt="AirPods Pro" class="product-image">
-                <h3>AirPods Pro (2nd Gen)</h3>
-                <div class="product-price">$249</div>
-                <p class="product-description">Premium wireless earbuds with active noise cancellation and spatial audio.</p>
-                <button class="order-button">Order Now</button>
+                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=900&q=80" alt="MacBook Pro 15 inch">
+                <h2>MacBook Pro 15"</h2>
+                <p class="price">Starting from $1,099</p>
+
+                <label for="mbp15-spec"><strong>Choose your configuration:</strong></label>
+                <select id="mbp15-spec" name="mbp15-spec">
+                    <option value="15-16-256-i7">15" | 16GB RAM | 256GB SSD | Intel Core i7</option>
+                    <option value="15-16-512-i7">15" | 16GB RAM | 512GB SSD | Intel Core i7</option>
+                    <option value="15-32-256-i9">15" | 32GB RAM | 256GB SSD | Intel Core i9</option>
+                    <option value="15-32-512-i9">15" | 32GB RAM | 512GB SSD | Intel Core i9</option>
+                </select>
+
+                <p>The MacBook Pro 15" is built for creators and power users who need more screen space and stronger performance. With Intel Core i7 or i9 processors, dedicated graphics options, and a vibrant Retina display, it is ideal for editing, design, and demanding workloads.</p>
             </div>
 
-            <!-- MacBook Pro -->
+            <!-- 3. MacBook Pro 16" -->
             <div class="product-card">
-                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202310?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1697230830200" alt="MacBook Pro" class="product-image">
-                <h3>MacBook Pro 14"</h3>
-                <div class="product-price">$1,999</div>
-                <p class="product-description">Powerful laptop with M3 chip, stunning Liquid Retina XDR display, and all-day battery life.</p>
-                <button class="order-button">Order Now</button>
+                <img src="https://images.unsplash.com/photo-1517055729445-fa7d27394b85?auto=format&fit=crop&w=900&q=80" alt="MacBook Pro 16 inch">
+                <h2>MacBook Pro 16"</h2>
+                <p class="price">Starting from $1,299</p>
+
+                <label for="mbp16-spec"><strong>Choose your configuration:</strong></label>
+                <select id="mbp16-spec" name="mbp16-spec">
+                    <option value="16-16-512-i7">16" | 16GB RAM | 512GB SSD | Intel Core i7</option>
+                    <option value="16-32-512-i9">16" | 32GB RAM | 512GB SSD | Intel Core i9</option>
+                    <option value="16-32-1tb-i9">16" | 32GB RAM | 1TB SSD | Intel Core i9</option>
+                    <option value="16-64-1tb-i9">16" | 64GB RAM | 1TB SSD | Intel Core i9</option>
+                </select>
+
+                <p>The MacBook Pro 16" delivers desktop-class performance in a portable body, perfect for professionals working with video editing, 3D rendering, music production, and software development. Its large Retina display, high RAM capacity, and fast SSD ensure a smooth, responsive experience even under heavy workloads.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 4. AirPods Max -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?auto=format&fit=crop&w=900&q=80" alt="AirPods Max">
+                <h2>AirPods Max</h2>
+                <p class="price">$350</p>
+
+                <p>AirPods Max are premium over-ear headphones that combine high-fidelity audio with advanced Active Noise Cancellation and Transparency mode. They deliver rich, detailed sound with Personalized Spatial Audio, making movies, music, and games feel immersive and lifelike.</p>
+                
+                <p>With a comfortable stainless steel frame, soft ear cushions, and up to 20 hours of listening time, they are designed for all-day use at home, in the studio, or on the go.</p>
             </div>
 
-            <!-- Apple Watch -->
+            <!-- 5. iPad Keyboard -->
             <div class="product-card">
-                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-s9-202309?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1692896370059" alt="Apple Watch" class="product-image">
-                <h3>Apple Watch Series 9</h3>
-                <div class="product-price">$399</div>
-                <p class="product-description">Advanced health monitoring, fitness tracking, and seamless iPhone integration.</p>
-                <button class="order-button">Order Now</button>
-            </div>
+                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=80" alt="iPad keyboard">
+                <h2>iPad Keyboard</h2>
+                <p class="price">$100</p>
 
-            <!-- iPad Air -->
-            <div class="product-card">
-                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-select-wifi-blue-202203?wid=940&hei=1112&fmt=p-jpg&qlt=95&.v=1645065732688" alt="iPad Air" class="product-image">
-                <h3>iPad Air</h3>
-                <div class="product-price">$599</div>
-                <p class="product-description">Versatile tablet with M1 chip, perfect for work and entertainment on the go.</p>
-                <button class="order-button">Order Now</button>
-            </div>
-
-            <!-- Magic Keyboard -->
-            <div class="product-card">
-                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK2A3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1628010471000" alt="Magic Keyboard" class="product-image">
-                <h3>Magic Keyboard</h3>
-                <div class="product-price">$99</div>
-                <p class="prTransactionEnter transaction ID from payment ID    Enter transaction ID from payment>Transaction ID <    >Transaction ID <>Order ProduPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct <    >Phone Number <>Order ProduEmailFull NamePayment Information:Please fill in the information and attach payment proofct <    >Email <oduct-description">Wireless keyboard with rechargeable battery and seamless Mac connectivity.</p>
-                <button class="order-button">Order Now</button>
+                <p>This iPad keyboard transforms your tablet into a more productive workstation, offering a responsive typing experience for writing, studying, and managing daily tasks. It connects quickly, supports stable input, and is optimized for long sessions.</p>
+                
+                <p>The slim, lightweight design protects your iPad while keeping it easy to carry, making it an excellent choice for students, professionals, and creators who work on the move.</p>
             </div>
         </div>
     </div>
-</body>
-    
-<!-- Order Form Modal -->
-<div id="orderModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Order Product</h2>
-        <p class="modal-subtitle"><h2Please fill in the information and attach payment proof
-        
-        <!-- Payment Info -->
-        <div class="payment-info">
-            <h3Payment Information:
-            <p><strong>Phone:</strong> 346-839-5691</p>
-            <p><strong>PayPal Account:</strong> Genjiwear.store@gmail.com</p>
-            <p><strong>Contact Email:</strong> Genjiwear.store@gmail.com</p>
-                        <p><strong>🚚 Shipping:</strong> <span style="color: #28a745; font-weight: bold;">FREE in US Only</span></p>
-                        <p><strong>International Shipping:</strong> <span style="color: #dc3545;">+$120 (Flat Rate)</span></p>Order ProduFull NamePayment Information:Please fill in the information and attach payment proofct    Full Name<h3>Payment Information:</h3>
-        <form id="orderForm" enctype="multipart/form-data">
-            <input type="hidden" id="productName" name="product_name">
-            <input type="hidden" id="productPrice" name="product_price">
-            
-            <div class="form-group">
-                <label for="customerName"Full Name
-                <input type="text" id="customerName" name="customer_name" required>
-            </div>
 
-            <div class="form-group">
-                <label for="customerEmailEmail
-                <input type="email" id="customerEmail" name="customer_email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="customerPhonePhone Number
-                <input type="tel" id="customerPhone" name="customer_phone" required>
-            </div>
-
-            <div class="form-group">
-                <label for="transactionId">Transaction ID *</label>
-                <input type="text" id="transactionId" name="transaction_id" required placeholder="TransactionEnter transaction ID from payment ID">
-            </div>
-
-            <div class="form-group">
-                <label for="shippingAddreShipping Address
-                <textarea id="shippingAddress" name="shipping_address" rows="4" required placeholder="TransactionHouse number, Street, District, City, Province, Postal codeEnter transaction ID from payment ID"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="paymentSlip">Attach Payment Slip
-                <input type="file" id="paymentSlip" name="payment_slip" accept="image/*" required>
-                <small>Order ProduSupported files: JPG, PNG, GIF (Max 5MB)Notes (Optional)Please check the attached file=== PAYMENT SLIP ===None=== NOTES ====== SHIPPING ADDRESS ===Transaction ID:=== PAYMENT INFORMATION ===Phone:Name:=== CUSTOMER INFORMATION ===Price:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct</small>
-            </div>
-
-            <div class="form-group">
-                <label for="orderNotes">Order ProduNotes Notes (Optional)
-                <textarea id="orderNotes" name="order_notes" rows="3" placeholder="Order ProduAdditional messageSupported files: JPG, PNG, GIF (Max 5MB)Notes (Optional)Please check the attached file=== PAYMENT SLIP ===None=== NOTES ====== SHIPPING ADDRESS ===Transaction ID:=== PAYMENT INFORMATION ===Phone:Name:=== CUSTOMER INFORMATION ===Price:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct"></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Order ProduConfirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct</button>
-        </form>
-    </div>
-</div>
-
-<style>
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 2% auto;
-    padding: 30px;
-    border: 1px solid #888;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 600px;
-    max-height: 90vh;
-    overflow-y: auto;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-}
-
-.modal h2 {
-    margin-top: 0;
-    color: #333;
-}
-
-.modal-subtitle {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.payment-info {
-    background: #f0f8ff;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border-left: 4px solid #007bff;
-}
-
-.payment-info h3 {
-    margin-top: 0;
-    color: #007bff;
-    font-size: 1.1rem;
-}
-
-.payment-info p {
-    margin: 8px 0;
-    color: #333;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-.form-group input[type="file"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.form-group small {
-    display: block;
-    margin-top: 5px;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.submit-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
-}
-
-.submit-btn:hover {
-    background-color: #0056b3;
-}
-
-.submit-btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-</style>
-
-<script>
-// Get modal elements
-const modal = document.getElementById('orderModal');
-const closeBtn = document.getElementsByClassName('close')[0];
-const orderButtons = document.getElementsByClassName('order-button');
-const orderForm = document.getElementById('orderForm');
-
-// Add click event to all "Order Now" buttons
-const setupOrderButtons = () => {
-    const allOrderButtons = document.querySelectorAll('.order-button, button.order-button, button[class*="order"]');
-    
-    allOrderButtons.forEach((btn, index) => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Get product info from the card
-            const productCard = this.closest('.product-card');
-            const productName = productCard.querySelector('h3') ? productCard.querySelector('h3').textContent : 'Product';
-            const productPrice = productCard.querySelector('.product-price') ? productCard.querySelector('.product-price').textContent : 'N/A';
-            
-            // Set product info in hidden fields
-            document.getElementById('productName').value = productName;
-            document.getElementById('productPrice').value = productPrice;
-            
-            // Show modal
-            modal.style.display = 'block';
+    <script>
+        // Optional: Add functionality for dropdown selection tracking
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function() {
+                console.log('Selected:', this.value);
+            });
         });
-    });
-};
-
-// Close modal when clicking X
-closeBtn.onclick = function() {
-    modal.style.display = 'none';
-}
-
-// Close modal when clicking outside
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
-}
-
-// Handle form submission
-orderForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const submitBtn = orderForm.querySelector('.submit-btn');
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Order ProduSending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct';
-    
-    try {
-        const formData = new FormData(orderForm);
-        
-        // Create email body
-        const productName = document.getElementById('productName').value;
-        const productPrice = document.getElementById('productPrice').value;
-        const customerName = document.getElementById('customerName').value;
-        const customerEmail = document.getElementById('customerEmail').value;
-        const customerPhone = document.getElementById('customerPhone').value;
-        const transactionId = document.getElementById('transactionId').value;
-        const shippingAddress = document.getElementById('shippingAddress').value;
-        const orderNotes = document.getElementById('orderNotes').value;
-        
-        const emailBody = `
-Order Produ=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct
-
-Order ProduProduct:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct ${productName}
-Order ProduPrice:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct ${productPrice}
-
-Order Produ=== CUSTOMER INFORMATION ===Price:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct
-Order ProduName:=== CUSTOMER INFORMATION ===Price:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct ${customerName}
-Order ProduEmailFull NamePayment Information:Please fill in the information and attach payment proofct: ${customerEmail}
-Order ProduPhone:Name:=== CUSTOMER INFORMATION ===Price:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct ${customerPhone}
-
-Order Produ=== PAYMENT INFORMATION ===Phone:Name:=== CUSTOMER INFORMATION ===Price:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct
-Order ProduTransaction ID:=== PAYMENT INFORMATION ===Phone:Name:=== CUSTOMER INFORMATION ===Price:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct ${transactionId}
-
-=== Order ProduShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct ===
-${shippingAddress}
-
-Order Produ=== NOTES ====== SHIPPING ADDRESS ===Transaction ID:=== PAYMENT INFORMATION ===Phone:Name:=== CUSTOMER INFORMATION ===Price:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct
-${orderNotes || 'Order ProduNone=== NOTES ====== SHIPPING ADDRESS ===Transaction ID:=== PAYMENT INFORMATION ===Phone:Name:=== CUSTOMER INFORMATION ===Price:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct'}
-
-Order Produ=== PAYMENT SLIP ===None=== NOTES ====== SHIPPING ADDRESS ===Transaction ID:=== PAYMENT INFORMATION ===Phone:Name:=== CUSTOMER INFORMATION ===Price:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct
-Order ProduPlease check the attached file=== PAYMENT SLIP ===None=== NOTES ====== SHIPPING ADDRESS ===Transaction ID:=== PAYMENT INFORMATION ===Phone:Name:=== CUSTOMER INFORMATION ===Price:Product:=== NEW ORDER FROM GENJIWEAR ===Sending...Confirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct
-        `;
-        
-        // Send email using EmailJS or mailto (simple solution)
-        const mailtoLink = `mailto:Genjiwear.store@gmail.com?subject=คำสั่งซื้อใหม่: ${productName}&body=${encodeURIComponent(emailBody)}`;
-        window.location.href = mailtoLink;
-        
-        // Show success message
-        alert('กรุณาส่งOrder ProduEmailFull NamePayment Information:Please fill in the information and attach payment proofctพร้อมOrder ProduAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofctด้วยค่ะ\n\nระบบจะเปิดโปรแกรมOrder ProduEmailFull NamePayment Information:Please fill in the information and attach payment proofctของคุณโดยอัตโนมัติ');
-        
-        // Reset form and close modal
-        orderForm.reset();
-        modal.style.display = 'none';
-        
-    } catch (error) {
-        console.error('Error:', error);
-        alert('เกิดข้อผิดพลาด กรุณาติดต่อเราโดยตรงที่: Genjiwear.store@gmail.com');
-    } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Order ProduConfirm OrderAttach Payment SlipShipping AddressPhone NumberEmailFull NamePayment Information:Please fill in the information and attach payment proofct';
-    }
-});
-
-// Initialize when page loads
-window.addEventListener('DOMContentLoaded', (event) => {
-    setupOrderButtons();
-});
-</script>
-
+    </script>
+</body>
 </html>
